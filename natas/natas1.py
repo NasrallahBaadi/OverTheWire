@@ -5,11 +5,11 @@ import re
 import time
 
 # Function to perform login with basic authentication
-def login(url, user, password, session, proxies=None):
+def login(url, user, password, proxies=None):
     print("[+] Logging in as natas1...")
     time.sleep(1)
     # Performing basic authentication with the "auth" argument.
-    response = session.get(url, auth=(user, password), proxies=proxies)
+    response = requests.get(url, auth=(user, password), proxies=proxies)
     if response.status_code == 200:
         print("[+] Logged in successfully!")
         time.sleep(1)
@@ -34,7 +34,7 @@ def getpass(response):
 
 def main():
     # Parse command-line arguments
-    parser = argparse.ArgumentParser(description="Grabs the password of natas2.")
+    parser = argparse.ArgumentParser(description="Grabs the password of natas2 from an HTML comment.")
     parser.add_argument('-p', '--password', help='Password of natas1.', required=True, metavar='Password')
     parser.add_argument('-x', '--proxy', help='Sends requests through Burp Suite proxy at 127.0.0.1:8080.', action='store_true')
     args = parser.parse_args()
@@ -44,13 +44,12 @@ def main():
     user = 'natas1'
     password = args.password
     proxies = {'http': 'http://127.0.0.1:8080', 'https': 'http://127.0.0.1:8080'}
-    session = requests.Session()
 
     # Check if proxy option is enabled and perform login
     if args.proxy:
-        login(url, user, password, session, proxies=proxies)
+        login(url, user, password, proxies=proxies)
     else:
-        login(url, user, password, session)
+        login(url, user, password)
 
 
 if __name__ == "__main__":
