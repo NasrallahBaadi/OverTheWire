@@ -3,7 +3,6 @@ import sys
 import argparse
 import re
 import time
-from urllib.parse import quote
 
 # Function to perform login with basic authentication
 def login(url, user, password, proxies=None):
