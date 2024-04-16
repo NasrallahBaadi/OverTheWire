@@ -63,13 +63,3 @@ def main():
     
 if __name__ == "__main__":
     main()
-
-
-
-
-
-# for i in range(101):
-#     sys.stdout.write('\r')
-#     sys.stdout.write("[%-10s] %d%%" % ('='*i, 1*i))
-#     sys.stdout.flush()
-#     sleep(0.02)
