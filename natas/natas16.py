@@ -33,7 +33,7 @@ def command(url, user, password, proxies=None):
             if "African" not in response.text:
                 passwd += i
                 sys.stdout.write('\r')
-                sys.stdout.write("[+] The password is: " + passwd)
+                sys.stdout.write("[+] The password of natas17 is: " + passwd)
                 sys.stdout.flush()
                 break
 
