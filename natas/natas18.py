@@ -50,7 +50,7 @@ def getpass(url, user, password, session, cookie, proxies=None):
 
 def main():
     # Parse command-line arguments
-    parser = argparse.ArgumentParser(description="Grabs the password of natas19 by exploiting a command injection vulnerability to read the password file.")
+    parser = argparse.ArgumentParser(description="Grabs the password of natas19 by fuzzing for the admin cookie.")
     parser.add_argument('-p', '--password', help='Password of natas18.', required=True, metavar='Password')
     parser.add_argument('-x', '--proxy', help='Sends requests through Burp Suite proxy at 127.0.0.1:8080.', action='store_true')
     args = parser.parse_args()
