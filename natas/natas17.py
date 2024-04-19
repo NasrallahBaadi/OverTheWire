@@ -41,7 +41,7 @@ def sqli(url, user, password, session, proxies=None):
 
 def main():
     # Parse command-line arguments
-    parser = argparse.ArgumentParser(description="Grabs the password of natas18 by exploiting a blind sql injection.")
+    parser = argparse.ArgumentParser(description="Grabs the password of natas18 by exploiting a time-based sql injection.")
     parser.add_argument('-p', '--password', help='Password of Natas17.', required=True, metavar='Password')
     parser.add_argument('-x', '--proxy', help='Sends requests through Burp Suite proxy at 127.0.0.1:8080.', action='store_true')
     args = parser.parse_args()
