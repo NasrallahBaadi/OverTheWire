@@ -64,14 +64,14 @@ def main():
 
     # Check if proxy option is enabled and perform login
     if args.proxy:
-        login(url, user, password, proxies=proxies)
+        login(url, user, password, session,  proxies=proxies)
         cookie = fuzz(url, user, password, session, proxies=proxies)
-        getpass(url, user, password, cookie, proxies=proxies)
+        getpass(url, user, password, cookie, session, proxies=proxies)
 
     else:
-        login(url, user, password)
+        login(url, user, password, session)
         cookie = fuzz(url, user, password, session)
-        getpass(url, user, password, cookie)
+        getpass(url, user, password, session, cookie)
     
 if __name__ == "__main__":
     main()
