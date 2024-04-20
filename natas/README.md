@@ -57,3 +57,43 @@ We get the password by exploiting a `Command injection` vulnerability to read th
 ## Natas11
 
 We still use the command injection vulnerability but with a different payload to read the password file.
+
+## Natas12
+
+The cookie used is XOR encoded with a secret key, we use the plain text cookie with the encoded one to calculate the key, and use the key to encode a modified cookie that we use to get the password
+
+## Natas13
+
+We exploit an upload form and upload a web shell and use it to read the password file.
+
+## Natas14
+
+The upload page uses a MIME-type filter that we need to bypass to upload a file and read the password.
+
+## Natas15
+
+We find a login form vulnerable to sql injection, we bypass the check and get the password.
+
+## Natas16
+
+There a search form vulnerable to blind sql injection, we use a special payload and brute force for the password.
+
+## Natas17
+
+We find a blind command injection vulnerability so we brute force the password.
+
+## Natas18
+
+The search form doesn't return any output so we use time-based sql injection to get the password.
+
+## Natas19
+
+The website uses clear text cookies, we brute force for the admin's cookie and get the password
+
+## Natas20
+
+The cookies are encrypted using hex, we brute force the admin cookie with encrypting it in every request.
+
+## Natas21
+
+The session is saved in a file and the website check for a special data in the file to determine admin, we use a vulnerable `name` parameter to inject that data in the file and get the password.
