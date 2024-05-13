@@ -97,3 +97,43 @@ The cookies are encrypted using hex, we brute force the admin cookie with encryp
 ## Natas21
 
 The session is saved in a file and the website check for a special data in the file to determine admin, we use a vulnerable `name` parameter to inject that data in the file and get the password.
+
+## Natas22
+
+We exploit the co-located websites by using one of the experimental page's functionality to add an unintended variable.
+
+## Natas23
+
+We send an empty parameter and read the password from the response before we get redirected.
+
+## Natas24
+
+We trick a password check form to get the password.
+
+## Natas25
+
+We exploit the insecure `strcmp` function in php to bypass a check.
+
+## Natas26
+
+We exploit a Local File Inclusion with Log Poisoning.
+
+## Natas27
+
+We exploit an insecure deserialization of a cookie to write a php file and read the password.
+
+## Natas28
+
+We exploit a length limit vulnerability in mysql.
+
+## Natas29
+
+## Natas30
+
+## Natas31
+
+## Natas32
+
+## Natas33
+
+## Natas34
